@@ -5,10 +5,12 @@
     box-sizing: border-box;
 }
 
+$primary-color: #FFD400;
+
 /* INDEX */
 
 .bg-bigornia {
-  background-color: #FFD400; 
+  background-color: $primary-color; 
 }
 .nav-product:hover {
     text-decoration: underline;
@@ -51,7 +53,7 @@ nav a {
     margin-right: 20px;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
-    color: #ffc107;
+    color: &$primary-color;
     font-weight: bold;
 }
 
@@ -111,7 +113,7 @@ section {
 .botonig {
     display: inline-block;
     padding: 12px 30px;
-    background-color: #ffc107;
+    background-color: $primary-color;
     color: #222;
     text-decoration: none;
     border-radius: 8px;
@@ -119,6 +121,7 @@ section {
     box-shadow: 0 4px 6px;
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 50px;
+    animation: aparecer 2s ease-in-out;
 }
 
 /* PRODUCTOS */
@@ -250,7 +253,7 @@ form textarea {
 .bt-submit {
   grid-column: 1 / -1;
   padding: 1rem 1rem;
-  background-color: #ffcc00; 
+  background-color: $primary-color; 
   color: #000;
   font-weight: 700;
   border: none;
@@ -296,7 +299,7 @@ footer {
 }
 
 .footer1 a {
-  color: #ffcc00; 
+  color: $primary-color; 
   text-decoration: none;
   font-weight: bold;
   background-color: #1a1a1a;
@@ -327,7 +330,7 @@ footer {
 }
 
 .footer2 li a:hover {
-  color: #ffcc00;
+  color: $primary-color;
 }
 
 .footer2 p {
@@ -349,4 +352,7 @@ footer {
   }
 }
 
-
+@keyframes aparecer {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
